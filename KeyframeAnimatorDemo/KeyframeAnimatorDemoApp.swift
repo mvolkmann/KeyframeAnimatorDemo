@@ -1,10 +1,3 @@
-//
-//  KeyframeAnimatorDemoApp.swift
-//  KeyframeAnimatorDemo
-//
-//  Created by Mark Volkmann on 6/17/23.
-//
-
 import SwiftUI
 
 @main

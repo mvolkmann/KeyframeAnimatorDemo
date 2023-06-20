@@ -51,45 +51,6 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            // Phases define discrete states that are
-            // provided to a view one at a time.
-            // Animation is performed on the changes between the states.
-            // All properties specified for a phase are animated concurrently.
-            // When all the animations for a phase complete,
-            // animations for the next phase begins.
-            // By default this continues indefinitely.
-            // A trigger can be used to only run through the phases
-            // one time each time the trigger value changes.
-            //
-            // Keyframes support animating property changes independently.
-            // Each "track" of keyframes specifies the times
-            // at which to modify a specific property.
-            // There can be any number of tracks with different timings,
-            // one for each property whose changes should be animated.
-            // Keyframes can animate any property
-            // that conforms to the Animatable protocol.
-
-            /*
-             KeyframeAnimator(
-                 initialValue: LogoAnimationValues(),
-                 trigger: runPlan
-             ) { values in
-                 LogoField(color: color, isFocused: isFocused)
-                     .scaleEffect(values.scale)
-                     .rotationEffect(values.rotation, anchor: .bottom)
-                     .offset(y: values.verticalTranslation)
-             } keyframes: { _ in
-                 KeyframeTrack(\.verticalTranslation) {
-                     SpringKeyframe(30, duration: 0.25, spring: smooth)
-                     CubicKeyframe(-120, duration: 0.3)
-                     CubicKeyframe(-120, duration: 0.5)
-                     CubicKeyframe(10, duration: 0.3)
-                     CubicKeyframe(0, spring: .bouncy)
-                 }
-                 // KeyframeTrack(\.scale) { ... }
-                 // KeyframeTrack(\.rotation) { ... }
-             }
-             */
             MyView()
                 /*
                  // This demonstrates basic use of phaseAnimator.
@@ -169,12 +130,6 @@ struct ContentView: View {
                     }
                     // Also see MoveKeyframe.
                 }
-
-            // See MapKit mapCameraKeyframeAnimator for animation changes
-            // to the centerCoordinate, heading, and distance in a Map camera.
-
-            // See KeyframeTimeline to evaluate a set of KeyframeTrack instances
-            // at a given time within the longest duration.
 
             Button("Trigger") { clickCount += 1 }
         }
